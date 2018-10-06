@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AppBar from '@material-ui/core/AppBar';
 
 class App extends Component {
   render() {
@@ -16,11 +17,11 @@ class App extends Component {
 class NavBar extends Component {
   render() {
     return (
-      <nav id="navbar">
+      <AppBar position="static" id="navbar">
         <a href="github.com" id="profile-link">GitHub</a>
         <a href="#welcome-section">Introduction</a>
         <a href="#projects">Projects</a>
-      </nav>
+      </AppBar>
     )
   }
 }
