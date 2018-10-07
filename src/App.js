@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#ffffff'
+    }
+  }
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <MuiThemeProvider theme={theme} className="App">
         <NavBar />
         <Introduction />
         <Projects />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
