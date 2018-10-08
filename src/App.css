@@ -1,1 +1,18 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
 
+#welcome-section {
+  position: absolute;
+  /*background: purple;*/
+  left: 0;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#projects {
+  visibility: hidden;
+}
