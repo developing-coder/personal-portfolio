@@ -20,11 +20,13 @@ const theme = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider theme={theme} className="App">
-        <NavBar />
-        <Introduction />
-        <Projects />
-      </MuiThemeProvider>
+      <div className="App">
+        <MuiThemeProvider theme={theme} >
+          <NavBar />
+          <Introduction />
+          <Projects />
+        </MuiThemeProvider>
+      </div>
     );
   }
 }
@@ -32,16 +34,18 @@ class App extends Component {
 class NavBar extends Component {
   render() {
     return (
-      <AppBar position="static" id="navbar">
-        <a href="https://github.com/developing-coder/" id="profile-link">
-          <FontAwesomeIcon icon={["fab", "github"]}/>
-        </a>
-        <a href="https://twitter.com/developingcoder" id="twitter-profile-link">
-          <FontAwesomeIcon icon={["fab", "twitter"]}/>
-        </a>
-        <a href="#welcome-section">Introduction</a>
-        <a href="#projects">Projects</a>
-      </AppBar>
+      <div>
+        <AppBar position="static" id="navbar">
+          <a href="https://github.com/developing-coder/" id="profile-link">
+            <FontAwesomeIcon icon={["fab", "github"]}/>
+          </a>
+          <a href="https://twitter.com/developingcoder" id="twitter-profile-link">
+            <FontAwesomeIcon icon={["fab", "twitter"]}/>
+          </a>
+          <a href="#welcome-section">Introduction</a>
+          <a href="#projects">Projects</a>
+        </AppBar>
+      </div>
     )
   }
 }
