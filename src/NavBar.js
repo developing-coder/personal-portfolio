@@ -12,7 +12,10 @@ library.add(faGithub, faTwitter);
 
 const styles = {
     root: {
-      flexGrow: 1
+        flexGrow: 1
+    },
+    test: {
+        background: 'pink'
     }
   };
 
@@ -25,7 +28,7 @@ class NavBar extends Component {
         return (
             <div className={classes.root}>
                 <AppBar position="static" id="navbar">
-                    <Toolbar>
+                    <Toolbar className={classes.test}>
                         <a href="https://github.com/developing-coder/" id="profile-link">
                             <FontAwesomeIcon icon={["fab", "github"]} />
                         </a>
