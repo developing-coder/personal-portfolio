@@ -9,7 +9,8 @@ const theme = createMuiTheme({
     primary: {
       main: '#ffffff'
     }
-  }
+  },
+  shadows: ['none']
 });
 
 class App extends Component {
