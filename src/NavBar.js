@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { withStyles } from '@material-ui/core/styles';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+import { CodeBenderLogo } from './svg/code-bender-logo';
+
 
 library.add(faGithub, faTwitter);
 
@@ -29,6 +32,7 @@ class NavBar extends Component {
             <div className={classes.root}>
                 <AppBar position="static" id="navbar">
                     <Toolbar className={classes.test}>
+                        <CodeBenderLogo />
                         <a href="https://github.com/developing-coder/" id="profile-link">
                             <FontAwesomeIcon icon={["fab", "github"]} />
                         </a>
