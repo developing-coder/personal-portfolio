@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import { CodeBenderLogo } from './svg/code-bender-logo';
+import { themeColors } from './Colors';
 
 
 library.add(faGithub, faTwitter);
@@ -17,8 +18,8 @@ const styles = {
     root: {
         flexGrow: 1
     },
-    test: {
-        background: 'pink'
+    logo: {
+        fill: themeColors.primary.contrastText,
     }
   };
 
@@ -31,8 +32,10 @@ class NavBar extends Component {
         return (
             <div className={classes.root}>
                 <AppBar position="static" id="navbar">
-                    <Toolbar className={classes.test}>
-                        <CodeBenderLogo />
+                    <Toolbar>
+                        <div className={classes.logo}>
+                            <CodeBenderLogo />
+                        </div>
                         <a href="https://github.com/developing-coder/" id="profile-link">
                             <FontAwesomeIcon icon={["fab", "github"]} />
                         </a>
