@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 import './App.css';
 import NavBar from './NavBar';
+import { themeColors } from './Colors';
 
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: '#ffffff'
+    primary: themeColors.primary,
+    secondary: {
+      light: themeColors.secondary,
+      main: themeColors.secondary,
+      dark: themeColors.secondary,
+      contrastText: themeColors.secondary
+    },
+    error: {
+      light: themeColors.error,
+      main: themeColors.error,
+      dark: themeColors.error,
+      contrastText: themeColors.error
     }
   },
   shadows: ['none']
