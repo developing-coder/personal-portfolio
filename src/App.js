@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import './App.css';
-import NavBar from './NavBar';
+import NavBar from './components/NavBar';
 import { themeColors } from './Colors';
 
 

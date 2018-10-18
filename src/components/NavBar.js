@@ -7,8 +7,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import { CodeBenderLogo } from './svg/code-bender-logo';
-import { themeColors } from './Colors';
+import { CodeBenderLogo } from '../svg/code-bender-logo';
+import { themeColors } from '../Colors';
 
 
 library.add(faGithub, faTwitter);
