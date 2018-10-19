@@ -1,9 +1,30 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import jss from 'jss';
+import preset from 'jss-preset-default';
+import { SheetsRegistry } from 'react-jss';
+import { JssProvider } from 'react-jss';
 
 import './App.css';
 import NavBar from './components/NavBar';
 import { themeColors } from './Colors';
+
+
+const setupJss = () => {
+  jss.setup(preset());
+
+  const sheetsRegistry = new SheetsRegistry();
+
+  const globalStyleSheet = jss.createStyleSheet(
+    {'@global': { a: { color: '#aabbcc' }}}
+  ).attach();
+
+  sheetsRegistry.add(globalStyleSheet);
+
+  return sheetsRegistry;
+}
+
+const sheets = setupJss();
 
 
 const theme = createMuiTheme({
@@ -25,19 +46,23 @@ const theme = createMuiTheme({
   shadows: ['none']
 });
 
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MuiThemeProvider theme={theme} >
-          <NavBar />
-          <Introduction />
-          <Projects />
-        </MuiThemeProvider>
-      </div>
+      <JssProvider registry={sheets}>
+        <div className="App">
+          <MuiThemeProvider theme={theme} >
+            <NavBar />
+            <Introduction />
+            <Projects />
+          </MuiThemeProvider>
+        </div>
+      </JssProvider>
     );
   }
 }
+
 
 class Introduction extends Component {
   render() {
@@ -48,6 +73,7 @@ class Introduction extends Component {
     )
   }
 }
+
 
 class Projects extends Component {
   render() {
