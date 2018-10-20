@@ -5,9 +5,8 @@ import preset from 'jss-preset-default';
 import { SheetsRegistry } from 'react-jss';
 import { JssProvider } from 'react-jss';
 
-import './App.css';
-import NavBar from './components/NavBar';
-import { themeColors } from './Colors';
+import NavBar from '../NavBar/NavBar';
+import { themeColors } from '../../constants/colors';
 
 
 const setupJss = () => {
