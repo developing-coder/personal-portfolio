@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import jss from 'jss';
 import preset from 'jss-preset-default';
 import { SheetsRegistry } from 'react-jss';
 import { JssProvider } from 'react-jss';
 
+import { theme } from '../../constants/theme';
 import NavBar from '../NavBar/NavBar';
-import { themeColors } from '../../constants/colors';
 
 
 const setupJss = () => {
@@ -24,26 +24,6 @@ const setupJss = () => {
 }
 
 const sheets = setupJss();
-
-
-const theme = createMuiTheme({
-  palette: {
-    primary: themeColors.primary,
-    secondary: {
-      light: themeColors.secondary,
-      main: themeColors.secondary,
-      dark: themeColors.secondary,
-      contrastText: themeColors.secondary
-    },
-    error: {
-      light: themeColors.error,
-      main: themeColors.error,
-      dark: themeColors.error,
-      contrastText: themeColors.error
-    }
-  },
-  shadows: ['none']
-});
 
 
 class App extends Component {
