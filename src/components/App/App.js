@@ -5,6 +5,7 @@ import { JssProvider } from 'react-jss';
 import { globalStyles } from '../../constants/globalStyles';
 import { theme } from '../../constants/theme';
 import NavBar from '../NavBar/NavBar';
+import Introduction from '../Introduction/Introduction';
 
 
 class App extends Component {
@@ -23,16 +24,6 @@ class App extends Component {
   }
 }
 
-
-class Introduction extends Component {
-  render() {
-    return (
-      <section id="welcome-section">
-        <h1>Welcome</h1>
-      </section>
-    )
-  }
-}
 
 
 class Projects extends Component {
