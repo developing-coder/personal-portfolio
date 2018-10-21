@@ -1,35 +1,16 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import jss from 'jss';
-import preset from 'jss-preset-default';
-import { SheetsRegistry } from 'react-jss';
 import { JssProvider } from 'react-jss';
 
+import { globalStyles } from '../../constants/globalStyles';
 import { theme } from '../../constants/theme';
 import NavBar from '../NavBar/NavBar';
-
-
-const setupJss = () => {
-  jss.setup(preset());
-
-  const sheetsRegistry = new SheetsRegistry();
-
-  const globalStyleSheet = jss.createStyleSheet(
-    {'@global': { a: { color: '#aabbcc' }}}
-  ).attach();
-
-  sheetsRegistry.add(globalStyleSheet);
-
-  return sheetsRegistry;
-}
-
-const sheets = setupJss();
 
 
 class App extends Component {
   render() {
     return (
-      <JssProvider registry={sheets}>
+      <JssProvider registry={globalStyles}>
         <div className="App">
           <MuiThemeProvider theme={theme} >
             <NavBar />
