@@ -6,6 +6,7 @@ import { globalStyles } from '../../constants/globalStyles';
 import { theme } from '../../constants/theme';
 import NavBar from '../NavBar/NavBar';
 import Introduction from '../Introduction/Introduction';
+import Projects from '../Projects/Projects';
 
 
 class App extends Component {
@@ -24,18 +25,5 @@ class App extends Component {
   }
 }
 
-
-
-class Projects extends Component {
-  render() {
-    return (
-      <section id="projects">
-        <div className="project-tile">
-          <a href="google.com">Example project</a>
-        </div>
-      </section>
-    )
-  }
-}
 
 export default App;
