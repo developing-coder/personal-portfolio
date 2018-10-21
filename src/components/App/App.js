@@ -7,7 +7,9 @@ import { theme } from '../../constants/theme';
 import NavBar from '../NavBar/NavBar';
 import Introduction from '../Introduction/Introduction';
 import Projects from '../Projects/Projects';
+import { loadIconsToLibrary } from '../../constants/icons';
 
+loadIconsToLibrary();
 
 class App extends Component {
   render() {

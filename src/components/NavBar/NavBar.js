@@ -3,15 +3,10 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { withStyles } from '@material-ui/core/styles';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import { CodeBenderLogo } from '../../svg/code-bender-logo';
 import { themeColors } from '../../constants/colors';
-
-
-library.add(faGithub, faTwitter);
 
 
 const styles = {
