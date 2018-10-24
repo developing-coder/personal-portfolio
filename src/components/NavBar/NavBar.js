@@ -21,14 +21,20 @@ class NavBar extends Component {
                         <div className={classes.logo}>
                             <CodeBenderLogo />
                         </div>
-                        <a href="https://github.com/developing-coder/" id="profile-link">
-                            <FontAwesomeIcon icon={["fab", "github"]} />
+                        <div id="navigation" className={classes.navigation}>
+                            <a href="#welcome-section" className={classes.navLink}>Introduction</a>
+                            <a href="#projects" className={classes.navLink}>Projects</a>
+                        </div>
+                        <a href="https://github.com/developing-coder/" id="profile-link" className={classes.navBarIcon}>
+                            <FontAwesomeIcon 
+                                icon={["fab", "github-square"]} 
+                                className={"fa-2x"} />
                         </a>
-                        <a href="https://twitter.com/developingcoder" id="twitter-profile-link">
-                            <FontAwesomeIcon icon={["fab", "twitter"]} />
+                        <a href="https://twitter.com/developingcoder" id="twitter-profile-link" className={classes.navBarIcon}>
+                            <FontAwesomeIcon 
+                                icon={["fab", "twitter-square"]} 
+                                className={"fa-2x"} />
                         </a>
-                        <a href="#welcome-section">Introduction</a>
-                        <a href="#projects">Projects</a>
                     </Toolbar>
                 </AppBar>
             </div>
