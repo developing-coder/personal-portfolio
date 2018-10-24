@@ -7,9 +7,5 @@ export const styles = {
     },
     logo: {
         fill: themeColors.primary.contrastText
-    },
-    siteTitle: {
-        paddingLeft: '1em',
-        flexGrow: 1,
     }
   };
