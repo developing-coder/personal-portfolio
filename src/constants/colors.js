@@ -1,9 +1,9 @@
 export const themeColors = {
     primary: {
-        light: 'white',
+        light: 'yellow',
         main: '#212121',
-        dark: '#212121',
-        contrastText: '#8BC34A',
+        dark: 'red',
+        contrastText: '#78e08f',
       },
       secondary: 'purple',
       error: 'red'
