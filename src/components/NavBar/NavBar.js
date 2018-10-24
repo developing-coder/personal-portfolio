@@ -5,18 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { withStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { styles } from './navBarStyles'
 import { CodeBenderLogo } from '../../svg/code-bender-logo';
-import { themeColors } from '../../constants/colors';
-
-
-const styles = {
-    root: {
-        flexGrow: 1
-    },
-    logo: {
-        fill: themeColors.primary.contrastText,
-    }
-  };
 
 
 class NavBar extends Component {
