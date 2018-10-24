@@ -21,6 +21,9 @@ class NavBar extends Component {
                         <div className={classes.logo}>
                             <CodeBenderLogo />
                         </div>
+                        <div className={classes.siteTitle}>
+                            <h1>CodeBender</h1>
+                        </div>
                         <a href="https://github.com/developing-coder/" id="profile-link">
                             <FontAwesomeIcon icon={["fab", "github"]} />
                         </a>

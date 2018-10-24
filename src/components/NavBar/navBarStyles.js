@@ -6,6 +6,10 @@ export const styles = {
         flexGrow: 1
     },
     logo: {
-        fill: themeColors.primary.contrastText,
+        fill: themeColors.primary.contrastText
+    },
+    siteTitle: {
+        paddingLeft: '1em',
+        flexGrow: 1,
     }
   };
