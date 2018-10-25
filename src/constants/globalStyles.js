@@ -2,6 +2,8 @@ import jss from 'jss';
 import preset from 'jss-preset-default';
 import { SheetsRegistry } from 'react-jss';
 
+import { themeColors } from './colors';
+
 
 export const globalStyles = (() => {
     jss.setup(preset());
@@ -11,7 +13,7 @@ export const globalStyles = (() => {
     const globalStyleSheet = jss.createStyleSheet({
         '@global': { 
             a: { 
-                color: '#aabbcc' 
+                color: themeColors.primary.light
             }
         }
     }).attach();
