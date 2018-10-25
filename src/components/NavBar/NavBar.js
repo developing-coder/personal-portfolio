@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { withStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from '@material-ui/core/Button';
 
 import { styles } from './navBarStyles'
 import { CodeBenderLogo } from '../../svg/code-bender-logo';
@@ -22,8 +23,8 @@ class NavBar extends Component {
                             <CodeBenderLogo />
                         </div>
                         <div id="navigation" className={classes.navigation}>
-                            <a href="#welcome-section" className={classes.navLink}>Introduction</a>
-                            <a href="#projects" className={classes.navLink}>Projects</a>
+                            <Button color="secondary">Introduction</Button>
+                            <Button color="secondary">Projects</Button>
                         </div>
                         <a href="https://github.com/developing-coder/" id="profile-link" className={classes.navBarIcon}>
                             <FontAwesomeIcon 
