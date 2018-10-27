@@ -13,6 +13,19 @@ import { loadIconsToLibrary } from '../../constants/icons';
 loadIconsToLibrary();
 
 class App extends Component {
+
+  componentDidMount() {
+    window.addEventListener('wheel', this.handleWheel, {passive: true});
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('wheel', this.handleWheel);
+  }
+
+  handleWheel(event) {
+    console.log(event.deltaY);
+  }
+
   render() {
     const { classes } = this.props
 
